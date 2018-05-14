@@ -18,8 +18,9 @@ namespace _2CoreSample
         }
 
         public static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)            
-                .UseStartup<Startup>()            
+            WebHost.CreateDefaultBuilder(args)   
+            .UseKestrel()
+                .UseStartup<Startup>()           
                 .Build();
     }
 }
